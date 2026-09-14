@@ -57,3 +57,4 @@ static host (Netlify, Vercel, GitHub Pages, etc.).
 "# ahmed-webportfolio" 
 "# ahmed-webportfolio" 
 "# ahmed-webportfolio" 
+"# ahmed-frontp" 
