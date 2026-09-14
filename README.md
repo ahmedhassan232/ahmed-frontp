@@ -54,3 +54,4 @@ static host (Netlify, Vercel, GitHub Pages, etc.).
 - Print the CV page (`/cv`) or use the command palette's "Print CV"
   action to save it as a PDF.
 "# ahmed-webportfolio" 
+"# ahmed-webportfolio" 
