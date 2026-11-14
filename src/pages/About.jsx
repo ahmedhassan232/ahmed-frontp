@@ -14,16 +14,17 @@ export default function About() {
         <div className="card" style={{ padding: 28 }}>
           <div className="avatar" style={{ width: 56, height: 56, fontSize: 18, marginBottom: 16 }}>AH</div>
           <h2 style={{ fontSize: 20 }}>Ahmed Hassan Sayed</h2>
-          <p className="text-dim" style={{ marginTop: 4 }}>Web Developer · Software Engineering Student</p>
+          <p className="text-dim" style={{ marginTop: 4 }}>Full Stack Developer · Backend Focus</p>
           <p className="text-dim" style={{ marginTop: 18, lineHeight: 1.7 }}>
-            I am a Software Engineering student interested in Web Development
-            and modern frontend technologies. I enjoy turning ideas and
-            interface concepts into responsive, interactive, and practical
-            web applications.
+            I am a Full Stack Developer and Artificial Intelligence student with practical
+            experience building personal and academic web applications. My main focus is
+            backend development using Python, FastAPI, and PostgreSQL, with experience in
+            RESTful APIs, database management, and frontend-backend integration.
           </p>
           <p className="text-dim" style={{ marginTop: 14, lineHeight: 1.7 }}>
-            My projects combine frontend development, dashboard design,
-            data-driven interfaces, and software engineering principles.
+            I also work with React and modern frontend technologies. I enjoy writing
+            maintainable code, solving technical problems, and developing reliable
+            software solutions.
           </p>
         </div>
 
@@ -31,24 +32,24 @@ export default function About() {
           <div className="build-card-icon accent-blue" style={{ background: 'var(--blue-dim)', color: 'var(--blue)' }}>
             <Target size={18} />
           </div>
-          <h3 style={{ marginBottom: 10 }}>🎯 Goal</h3>
+          <h3 style={{ marginBottom: 10 }}>Focus</h3>
           <p className="text-dim" style={{ lineHeight: 1.7 }}>
-            Become a professional Web Developer specializing in modern
-            frontend applications and interactive web experiences.
+            Building reliable web applications through strong backend foundations,
+            clean APIs, effective database management, and well-integrated user interfaces.
           </p>
 
           <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
             <div className="cv-item">
               <div className="cv-item-title">Location</div>
-              <div className="cv-item-sub">Egypt 🇪🇬</div>
+              <div className="cv-item-sub">Beni Suef, Egypt</div>
             </div>
             <div className="cv-item">
               <div className="cv-item-title">Degree</div>
-              <div className="cv-item-sub">Software Engineering</div>
+              <div className="cv-item-sub">Bachelor of Artificial Intelligence</div>
             </div>
             <div className="cv-item">
-              <div className="cv-item-title">Status</div>
-              <div className="cv-item-sub">Software Engineering Student</div>
+              <div className="cv-item-title">Education</div>
+              <div className="cv-item-sub">Faculty of Computers and Artificial Intelligence · 2023–2027</div>
             </div>
           </div>
         </div>
