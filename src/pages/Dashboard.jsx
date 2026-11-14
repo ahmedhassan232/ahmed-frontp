@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Zap, Code2, Smartphone, Target, ArrowUpRight, Mail, Download, Server, Database } from 'lucide-react';
+import { Code2, Target, ArrowUpRight, Mail, Download, Server, Database } from 'lucide-react';
 import { projects } from '../data/projects';
 import { skillGroups } from '../data/skills';
 import { buildCards } from '../data/services';
@@ -40,7 +40,7 @@ export default function Dashboard() {
             React and modern web technologies to build complete application experiences.
           </p>
           <span className="availability-pill" style={{ marginTop: 16 }}>
-            <span className="dot dot-green" /> Open to Development Opportunities
+            <span className="dot dot-green" /> Beni Suef, Egypt · AI Student
           </span>
           <div className="hero-actions">
             <Link to="/projects" className="btn btn-primary">View My Projects <ArrowUpRight size={15} /></Link>
