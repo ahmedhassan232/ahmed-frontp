@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Link2, MapPin, Phone, Github, Linkedin } from 'lucide-react';
+import { Mail, Link2, MapPin, Phone } from 'lucide-react';
 
 const EMAIL = 'ghghghb083@gmail.com';
 const PHONE = '+20 1127490096';
@@ -61,7 +61,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="contact-row">
-            <div className="contact-row-icon"><Github size={16} /></div>
+            <div className="contact-row-icon"><Link2 size={16} /></div>
             <div>
               <div className="contact-row-label">GitHub</div>
               <a className="contact-row-value" href={GITHUB} target="_blank" rel="noreferrer">github.com/ahmedhassan232</a>
