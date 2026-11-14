@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import { X, ExternalLink, Link2 } from 'lucide-react';
+import { X, ExternalLink, Link2, LockKeyhole } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
+    if (!project) return undefined;
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
@@ -10,7 +11,7 @@ export default function ProjectModal({ project, onClose }) {
       window.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
     };
-  }, [onClose]);
+  }, [project, onClose]);
 
   if (!project) return null;
 
@@ -63,11 +64,6 @@ export default function ProjectModal({ project, onClose }) {
           </section>
 
           <section className="modal-section">
-            <h4 className="eyebrow">Challenges</h4>
-            <p className="text-dim">{project.challenges || 'Details coming soon.'}</p>
-          </section>
-
-          <section className="modal-section">
             <h4 className="eyebrow">What I Built</h4>
             <p className="text-dim">{project.built || 'Details coming soon.'}</p>
           </section>
@@ -78,14 +74,19 @@ export default function ProjectModal({ project, onClose }) {
                 Live Demo <ExternalLink size={14} />
               </a>
             ) : (
-              <button className="btn btn-ghost" disabled>Live Demo — Details coming soon</button>
+              <button className="btn btn-ghost" disabled>Live Demo Not Available</button>
             )}
             {project.sourceUrl ? (
               <a className="btn btn-ghost" href={project.sourceUrl} target="_blank" rel="noreferrer">
                 Source Code <Link2 size={14} />
               </a>
+            ) : project.sourceStatus ? (
+              <button className="btn btn-ghost" disabled>
+                {project.sourceStatus === 'Private repository' ? <LockKeyhole size={14} /> : <Link2 size={14} />}
+                {project.sourceStatus}
+              </button>
             ) : (
-              <button className="btn btn-ghost" disabled>Source Code — Details coming soon</button>
+              <button className="btn btn-ghost" disabled>Source Not Available</button>
             )}
           </div>
         </div>
