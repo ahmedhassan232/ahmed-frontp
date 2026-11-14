@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
-import { Mail, Link2 } from 'lucide-react';
+import { Mail, Link2, Github, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-grid">
         <div>
-          <div className="brand-name" style={{ fontSize: 18, marginBottom: 8 }}>Ahmed Hassan</div>
+          <div className="brand-name" style={{ fontSize: 18, marginBottom: 8 }}>Ahmed Hassan Sayed</div>
           <p className="text-dim" style={{ maxWidth: 280 }}>
-            Web Developer · Frontend Development · Software Engineering
+            Full Stack Developer · Python · FastAPI · PostgreSQL
           </p>
-          <p className="text-faint" style={{ marginTop: 10 }}>Egypt 🇪🇬</p>
+          <p className="text-faint" style={{ marginTop: 10 }}>Beni Suef, Egypt 🇪🇬</p>
         </div>
         <div>
           <div className="footer-col-title">Quick Links</div>
@@ -30,9 +30,8 @@ export default function Footer() {
         <div>
           <div className="footer-col-title">Social</div>
           <a href="mailto:ghghghb083@gmail.com"><Mail size={14} /> Email</a>
-          <a href="https://www.linkedin.com/in/a7med-hassan-05085536a" target="_blank" rel="noreferrer">
-            <Link2 size={14} /> LinkedIn
-          </a>
+          <a href="https://github.com/ahmedhassan232" target="_blank" rel="noreferrer"><Github size={14} /> GitHub</a>
+          <a href="https://www.linkedin.com/in/ahmed-hassan-05085536a" target="_blank" rel="noreferrer"><Linkedin size={14} /> LinkedIn</a>
         </div>
       </div>
       <div className="footer-bottom">
