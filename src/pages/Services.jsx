@@ -31,7 +31,7 @@ export default function Services() {
       <div className="card" style={{ padding: 24, marginTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
         <div>
           <h3 style={{ marginBottom: 6 }}>Interested in working together?</h3>
-          <p className="text-dim">I'm open to internships, collaborations, and frontend project work.</p>
+          <p className="text-dim">Contact me to discuss software projects, backend development, and full-stack collaboration.</p>
         </div>
         <Link to="/contact" className="btn btn-primary">Contact Me</Link>
       </div>
