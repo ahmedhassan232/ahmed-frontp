@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Zap, Code2, Smartphone, Target, ArrowUpRight, Mail, Download } from 'lucide-react';
+import { Zap, Code2, Smartphone, Target, ArrowUpRight, Mail, Download, Server, Database } from 'lucide-react';
 import { projects } from '../data/projects';
-import { frontendSkills } from '../data/skills';
+import { skillGroups } from '../data/skills';
 import { buildCards } from '../data/services';
 
 const CHART_COLORS = ['var(--blue)', 'var(--green)', 'var(--purple)', 'var(--orange)'];
@@ -32,44 +32,44 @@ export default function Dashboard() {
     <div className="page">
       <div className="hero-card card">
         <div className="hero-text">
-          <span className="eyebrow">WEB DEVELOPER — OVERVIEW</span>
-          <h1 className="hero-title">Hi, I'm Ahmed Hassan 👋</h1>
+          <span className="eyebrow">FULL STACK DEVELOPER — BACKEND FOCUS</span>
+          <h1 className="hero-title">Hi, I'm Ahmed Hassan Sayed 👋</h1>
           <p className="hero-desc">
-            I am a Web Developer and Software Engineering student focused on
-            building responsive websites, modern user interfaces, interactive
-            dashboards, and practical frontend applications.
+            I am a Full Stack Developer and Artificial Intelligence student focused on
+            backend development with Python, FastAPI, and PostgreSQL. I also work with
+            React and modern web technologies to build complete application experiences.
           </p>
           <span className="availability-pill" style={{ marginTop: 16 }}>
-            <span className="dot dot-green" /> Available for Web Development Opportunities
+            <span className="dot dot-green" /> Open to Development Opportunities
           </span>
           <div className="hero-actions">
             <Link to="/projects" className="btn btn-primary">View My Projects <ArrowUpRight size={15} /></Link>
             <Link to="/contact" className="btn btn-ghost">Contact Me <Mail size={15} /></Link>
-            <Link to="/cv" className="btn btn-ghost">Download CV <Download size={15} /></Link>
+            <Link to="/cv" className="btn btn-ghost">View CV <Download size={15} /></Link>
           </div>
         </div>
       </div>
 
       <div className="kpi-grid">
         <div className="card kpi-card accent-blue">
-          <div className="kpi-icon"><Code2 size={18} /></div>
-          <div className="kpi-value">{projects.length}+</div>
-          <div className="kpi-label">Web Projects</div>
+          <div className="kpi-icon"><Server size={18} /></div>
+          <div className="kpi-value">Python</div>
+          <div className="kpi-label">Backend Development</div>
         </div>
         <div className="card kpi-card accent-green">
-          <div className="kpi-icon"><Zap size={18} /></div>
-          <div className="kpi-value">React</div>
-          <div className="kpi-label">Frontend Technologies</div>
+          <div className="kpi-icon"><Database size={18} /></div>
+          <div className="kpi-value">PostgreSQL</div>
+          <div className="kpi-label">Database</div>
         </div>
         <div className="card kpi-card accent-purple">
-          <div className="kpi-icon"><Smartphone size={18} /></div>
-          <div className="kpi-value">Yes</div>
-          <div className="kpi-label">Responsive Design</div>
+          <div className="kpi-icon"><Code2 size={18} /></div>
+          <div className="kpi-value">React</div>
+          <div className="kpi-label">Frontend Development</div>
         </div>
         <div className="card kpi-card accent-orange">
           <div className="kpi-icon"><Target size={18} /></div>
-          <div className="kpi-value">Open</div>
-          <div className="kpi-label">Availability</div>
+          <div className="kpi-value">2023–2027</div>
+          <div className="kpi-label">Bachelor of Artificial Intelligence</div>
         </div>
       </div>
 
@@ -91,8 +91,8 @@ export default function Dashboard() {
 
       <div className="section">
         <div className="section-head">
-          <h2>Web Projects by Type</h2>
-          <span className="text-faint">{total} tagged categories</span>
+          <h2>Selected Projects by Area</h2>
+          <span className="text-faint">{total} project tags</span>
         </div>
         <div className="card chart-card">
           <div className="donut-wrap">
@@ -126,14 +126,16 @@ export default function Dashboard() {
 
       <div className="section">
         <div className="section-head">
-          <h2>Skill Levels</h2>
+          <h2>Technical Skills</h2>
           <Link to="/skills" className="link-more">View all →</Link>
         </div>
         <div className="card" style={{ padding: 22 }}>
-          {frontendSkills.slice(0, 5).map((s) => (
-            <div className="skill-row" key={s.name}>
-              <div className="skill-row-top"><span>{s.name}</span><span className="text-faint">{s.level}%</span></div>
-              <div className="skill-track"><div className="skill-fill" style={{ width: `${s.level}%` }} /></div>
+          {skillGroups.slice(0, 3).map((group) => (
+            <div key={group.title} style={{ marginBottom: 16 }}>
+              <div className="skill-row-top"><strong>{group.title}</strong></div>
+              <div className="pill-list" style={{ marginTop: 8 }}>
+                {group.skills.map((skill) => <span className="pill" key={skill}>{skill}</span>)}
+              </div>
             </div>
           ))}
         </div>
@@ -141,11 +143,11 @@ export default function Dashboard() {
 
       <div className="section">
         <div className="section-head">
-          <h2>Recent Projects</h2>
+          <h2>Selected Projects</h2>
           <Link to="/projects" className="link-more">View all →</Link>
         </div>
         <div className="grid-2">
-          {projects.map((p) => (
+          {projects.slice(0, 4).map((p) => (
             <Link to="/projects" key={p.id} className="card" style={{ padding: 20, display: 'block' }}>
               <div className="project-card-cats">
                 {p.category.map((c) => <span key={c} className="tag">{c}</span>)}
