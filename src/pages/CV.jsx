@@ -1,4 +1,4 @@
-import { Printer, Github, Linkedin, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Printer, Link2, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 import { projects } from '../data/projects';
 import { skillGroups, softSkills } from '../data/skills';
 
@@ -31,8 +31,8 @@ export default function CV() {
             <div><Mail size={13} /> {EMAIL}</div>
             <div><Phone size={13} /> +20 1127490096</div>
             <div><MapPin size={13} /> Beni Suef, Egypt</div>
-            <a href={GITHUB} target="_blank" rel="noreferrer"><Github size={13} /> github.com/ahmedhassan232</a>
-            <a href={LINKEDIN} target="_blank" rel="noreferrer"><Linkedin size={13} /> linkedin.com/in/ahmed-hassan-05085536a</a>
+            <a href={GITHUB} target="_blank" rel="noreferrer"><Link2 size={13} /> github.com/ahmedhassan232</a>
+            <a href={LINKEDIN} target="_blank" rel="noreferrer"><Link2 size={13} /> linkedin.com/in/ahmed-hassan-05085536a</a>
           </div>
         </div>
 
