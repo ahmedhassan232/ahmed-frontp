@@ -5,7 +5,7 @@ import { otherProjects, otherProjectDomains } from '../data/otherProjects';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 
-const filters = ['All', 'Web Applications', 'Dashboards', 'Frontend', 'React', 'JavaScript'];
+const filters = ['All', 'Web Applications', 'Backend', 'Dashboards', 'AI', 'Python', 'React', 'Mobile Applications'];
 
 export default function Projects() {
   const [filter, setFilter] = useState('All');
@@ -29,8 +29,8 @@ export default function Projects() {
       <div className="page-header">
         <div>
           <span className="eyebrow">02 — Portfolio</span>
-          <h1>Web Projects</h1>
-          <p className="page-sub">A collection of my real web development work.</p>
+          <h1>Selected Projects</h1>
+          <p className="page-sub">Personal and academic work with verified project links where available.</p>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ export default function Projects() {
       </div>
 
       <div className="section">
-        <div className="section-head"><h2>All Web Projects</h2></div>
+        <div className="section-head"><h2>Browse Projects</h2></div>
 
         <div className="search-row">
           <Search size={16} className="text-faint" />
@@ -72,25 +72,27 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="section">
-        <div className="section-head">
-          <h2>Other Technical Projects</h2>
-          <span className="text-faint">AI & Data · Embedded Systems · Networking</span>
+      {otherProjects.length > 0 && (
+        <div className="section">
+          <div className="section-head">
+            <h2>Additional Technical Projects</h2>
+            <span className="text-faint">AI & Data · Embedded Systems · Networking</span>
+          </div>
+          <div className="grid-3">
+            {otherProjectDomains.map((domain) => (
+              <div className="card" style={{ padding: 20 }} key={domain}>
+                <span className="tag" style={{ marginBottom: 12, display: 'inline-block' }}>{domain}</span>
+                {otherProjects.filter((p) => p.domain === domain).map((p) => (
+                  <div key={p.name} style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: 13.5, fontWeight: 600 }}>{p.name}</div>
+                    <div className="text-faint" style={{ fontSize: 12.5 }}>{p.description}</div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="grid-3">
-          {otherProjectDomains.map((domain) => (
-            <div className="card" style={{ padding: 20 }} key={domain}>
-              <span className="tag" style={{ marginBottom: 12, display: 'inline-block' }}>{domain}</span>
-              {otherProjects.filter((p) => p.domain === domain).map((p) => (
-                <div key={p.name} style={{ marginBottom: 12 }}>
-                  <div style={{ fontSize: 13.5, fontWeight: 600 }}>{p.name}</div>
-                  <div className="text-faint" style={{ fontSize: 12.5 }}>{p.description}</div>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
+      )}
 
       <ProjectModal project={active} onClose={() => setActive(null)} />
     </div>
