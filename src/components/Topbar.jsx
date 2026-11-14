@@ -24,7 +24,7 @@ export default function Topbar({ onMenuClick, onSearchClick }) {
 
       <div className="topbar-right">
         <span className="availability-pill hide-mobile">
-          <span className="dot dot-green" /> Available
+          <span className="dot dot-green" /> Beni Suef, Egypt
         </span>
         <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
           {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
