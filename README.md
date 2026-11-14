@@ -37,7 +37,7 @@ npm run preview
 | EduMind AI | https://edumind-ai-i17b.vercel.app | Private repository |
 | REAS — Real Estate Analytics System | https://rea-ss.vercel.app | https://github.com/ahmedhassan232/REASs |
 | SmartReviewAI | Not published | No public repository verified |
-| Noor Al-Islam | Not listed | https://github.com/ahmedhassan232/noor-al-islam-app- |
+| Noor Al-Islam | https://noor-al-islam-app-gold.vercel.app | https://github.com/ahmedhassan232/noor-al-islam-app- |
 | Personal Portfolio | https://ahmed-frontp.vercel.app | https://github.com/ahmedhassan232/ahmed-frontp |
 
 ## Personal details
