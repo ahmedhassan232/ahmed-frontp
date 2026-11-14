@@ -1,47 +1,45 @@
 export const services = [
   {
-    title: 'Frontend Development',
-    description: 'Building responsive and modern frontend interfaces.',
+    title: 'Backend API Development',
+    description: 'Building RESTful API workflows with Python and FastAPI.',
     color: 'blue',
   },
   {
-    title: 'Dashboard Development',
-    description:
-      'Creating interactive admin dashboards with charts, tables, filters, cards and data-driven interfaces.',
+    title: 'Database Integration',
+    description: 'Working with PostgreSQL, SQL, and relational database concepts.',
     color: 'green',
   },
   {
-    title: 'Responsive Web Design',
-    description:
-      'Designing layouts that adapt smoothly across desktop, tablet and mobile devices.',
+    title: 'Full-Stack Integration',
+    description: 'Connecting React interfaces with backend services and application data.',
     color: 'purple',
   },
   {
-    title: 'UI Implementation',
-    description: 'Turning UI concepts into clean, reusable frontend components.',
+    title: 'Web Application Development',
+    description: 'Building practical web applications with modern frontend and backend technologies.',
     color: 'orange',
   },
 ];
 
 export const buildCards = [
   {
-    title: 'Responsive Websites',
-    description: 'Modern responsive websites that work across desktop, tablet, and mobile devices.',
+    title: 'Backend APIs',
+    description: 'RESTful services and backend workflows using Python and FastAPI.',
     color: 'blue',
   },
   {
-    title: 'Admin Dashboards',
-    description: 'Interactive dashboards with cards, tables, charts, filters, forms, and dark mode.',
+    title: 'Database-Driven Apps',
+    description: 'Application data management with PostgreSQL and SQL.',
     color: 'green',
   },
   {
-    title: 'Frontend Applications',
-    description: 'Component-based frontend applications using modern JavaScript frameworks.',
+    title: 'Full-Stack Integration',
+    description: 'Connecting backend services with React-based user interfaces.',
     color: 'purple',
   },
   {
-    title: 'UI Development',
-    description: 'Clean reusable interfaces with attention to spacing, typography, usability, and visual consistency.',
+    title: 'AI-Enabled Projects',
+    description: 'Applying machine-learning and natural-language-processing fundamentals in software projects.',
     color: 'orange',
   },
 ];
