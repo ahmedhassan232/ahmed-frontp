@@ -117,7 +117,7 @@ export const projects = [
       'Adapting a web application for Android while preserving a comfortable mobile experience.',
     built:
       'A mobile Islamic application and its Android packaging workflow.',
-    liveUrl: null,
+    liveUrl: 'https://noor-al-islam-app-gold.vercel.app',
     sourceUrl: 'https://github.com/ahmedhassan232/noor-al-islam-app-',
     sourceStatus: null,
   },
