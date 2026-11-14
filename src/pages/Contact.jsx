@@ -1,17 +1,20 @@
 import { useState } from 'react';
-import { Mail, Link2, MapPin } from 'lucide-react';
+import { Mail, Link2, MapPin, Phone, Github, Linkedin } from 'lucide-react';
 
 const EMAIL = 'ghghghb083@gmail.com';
+const PHONE = '+20 1127490096';
+const GITHUB = 'https://github.com/ahmedhassan232';
+const LINKEDIN = 'https://www.linkedin.com/in/ahmed-hassan-05085536a';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState('idle'); // idle | sending | sent
+  const [status, setStatus] = useState('idle');
 
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = 'Please enter your name.';
-    if (!form.email.trim() || !/^\S+@\S+\.\S+$/.test(form.email)) e.email = 'Please enter a valid email.';
+    if (!form.email.trim() || !/^\\S+@\\S+\\.\\S+$/.test(form.email)) e.email = 'Please enter a valid email.';
     if (!form.message.trim()) e.message = 'Please enter a message.';
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -21,11 +24,11 @@ export default function Contact() {
     ev.preventDefault();
     if (!validate()) return;
     setStatus('sending');
-    const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(form.subject || `Message from ${form.name}`)}&body=${encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`)}`;
+    const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(form.subject || `Message from ${form.name}`)}&body=${encodeURIComponent(`${form.message}\\n\\n— ${form.name} (${form.email})`)}`;
     setTimeout(() => {
       setStatus('sent');
       window.location.href = mailto;
-    }, 700);
+    }, 500);
   };
 
   return (
@@ -35,8 +38,8 @@ export default function Contact() {
           <span className="eyebrow">Connect</span>
           <h1>Let's Build Something Together</h1>
           <p className="page-sub">
-            I'm open to Web Development opportunities, frontend projects, internships,
-            collaborations, and learning opportunities.
+            Get in touch about development opportunities, internships, collaborations,
+            or software projects.
           </p>
         </div>
       </div>
@@ -47,23 +50,35 @@ export default function Contact() {
             <div className="contact-row-icon"><Mail size={16} /></div>
             <div>
               <div className="contact-row-label">Email</div>
-              <div className="contact-row-value">{EMAIL}</div>
+              <a className="contact-row-value" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            </div>
+          </div>
+          <div className="contact-row">
+            <div className="contact-row-icon"><Phone size={16} /></div>
+            <div>
+              <div className="contact-row-label">Phone</div>
+              <a className="contact-row-value" href="tel:+201127490096">{PHONE}</a>
+            </div>
+          </div>
+          <div className="contact-row">
+            <div className="contact-row-icon"><Github size={16} /></div>
+            <div>
+              <div className="contact-row-label">GitHub</div>
+              <a className="contact-row-value" href={GITHUB} target="_blank" rel="noreferrer">github.com/ahmedhassan232</a>
             </div>
           </div>
           <div className="contact-row">
             <div className="contact-row-icon"><Link2 size={16} /></div>
             <div>
               <div className="contact-row-label">LinkedIn</div>
-              <a className="contact-row-value" href="https://www.linkedin.com/in/a7med-hassan-05085536a" target="_blank" rel="noreferrer">
-                linkedin.com/in/a7med-hassan-05085536a
-              </a>
+              <a className="contact-row-value" href={LINKEDIN} target="_blank" rel="noreferrer">linkedin.com/in/ahmed-hassan-05085536a</a>
             </div>
           </div>
           <div className="contact-row">
             <div className="contact-row-icon"><MapPin size={16} /></div>
             <div>
               <div className="contact-row-label">Location</div>
-              <div className="contact-row-value">Egypt 🇪🇬</div>
+              <div className="contact-row-value">Beni Suef, Egypt</div>
             </div>
           </div>
         </div>
@@ -88,16 +103,14 @@ export default function Contact() {
             <textarea id="message" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
             {errors.message && <div className="form-error">{errors.message}</div>}
           </div>
-
           <button className="btn btn-primary" type="submit" disabled={status === 'sending'}>
-            {status === 'sending' ? 'Sending...' : 'Send Message'}
+            {status === 'sending' ? 'Opening email...' : 'Send Message'}
           </button>
-
           {status === 'sent' && (
-            <div className="form-status success">Message sent successfully — your email app should open to finish sending.</div>
+            <div className="form-status success">Your email app should open with the message ready to send.</div>
           )}
           <p className="text-faint" style={{ fontSize: 12, marginTop: 12 }}>
-            This is a frontend-only demo — submitting opens your email client via mailto, there's no backend email service.
+            This form opens your email application. It does not send messages through a website backend.
           </p>
         </form>
       </div>
