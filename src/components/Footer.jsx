@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Link2, Github, Linkedin } from 'lucide-react';
+import { Mail, Link2 } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -30,8 +30,8 @@ export default function Footer() {
         <div>
           <div className="footer-col-title">Social</div>
           <a href="mailto:ghghghb083@gmail.com"><Mail size={14} /> Email</a>
-          <a href="https://github.com/ahmedhassan232" target="_blank" rel="noreferrer"><Github size={14} /> GitHub</a>
-          <a href="https://www.linkedin.com/in/ahmed-hassan-05085536a" target="_blank" rel="noreferrer"><Linkedin size={14} /> LinkedIn</a>
+          <a href="https://github.com/ahmedhassan232" target="_blank" rel="noreferrer"><Link2 size={14} /> GitHub</a>
+          <a href="https://www.linkedin.com/in/ahmed-hassan-05085536a" target="_blank" rel="noreferrer"><Link2 size={14} /> LinkedIn</a>
         </div>
       </div>
       <div className="footer-bottom">
