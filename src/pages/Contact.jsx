@@ -14,7 +14,7 @@ export default function Contact() {
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = 'Please enter your name.';
-    if (!form.email.trim() || !/^\\S+@\\S+\\.\\S+$/.test(form.email)) e.email = 'Please enter a valid email.';
+    if (!form.email.trim() || !/^\S+@\S+\.\S+$/.test(form.email)) e.email = 'Please enter a valid email.';
     if (!form.message.trim()) e.message = 'Please enter a message.';
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -24,7 +24,7 @@ export default function Contact() {
     ev.preventDefault();
     if (!validate()) return;
     setStatus('sending');
-    const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(form.subject || `Message from ${form.name}`)}&body=${encodeURIComponent(`${form.message}\\n\\n— ${form.name} (${form.email})`)}`;
+    const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(form.subject || `Message from ${form.name}`)}&body=${encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`)}`;
     setTimeout(() => {
       setStatus('sent');
       window.location.href = mailto;
