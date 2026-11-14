@@ -1,69 +1,155 @@
 export const projects = [
   {
-    id: 'real-estate-analytics',
-    name: 'Real Estate Analytics System',
-    category: ['Web Application', 'Admin Dashboard'],
-    filterTags: ['Web Applications', 'Dashboards', 'React'],
+    id: 'edumind-ai',
+    name: 'EduMind AI',
+    category: ['Full Stack', 'AI Education'],
+    filterTags: ['Web Applications', 'Backend', 'Python', 'AI'],
     description:
-      'A modern real estate analytics and management dashboard designed to manage and analyze property data through a professional web interface.',
+      'An AI-powered educational platform that brings course management, document learning, quizzes, and personalized study planning into one place.',
     overview:
-      'A dashboard-style web application for managing real estate portfolios — properties, owners, employees and performance statistics — through a single admin interface.',
+      'A learning platform built with Next.js and PostgreSQL, with course management, document ingestion, quizzes, study planning, and optional AI-assisted tutoring.',
     problem:
-      'Real estate data (properties, owners, employees, performance) needed one interactive place to be entered, browsed and understood, instead of static spreadsheets.',
+      'Students need one organized place to manage learning materials, practice with quizzes, and plan their study activity.',
     verified: true,
-    screens: [
-      'Dashboard', 'Properties', 'Add Property', 'Owners',
-      'Employees', 'Statistics', 'Reports', 'Settings', 'About',
-    ],
+    screens: ['Courses', 'Documents', 'Quizzes', 'Study Plan', 'AI Assistant'],
     features: [
-      'Responsive dashboard with sidebar navigation and topbar search',
-      'Property management screens with forms, tables and pagination',
-      'Filtering across property listings',
-      'Charts and statistics for property data (apartments, villas, offices, lands)',
-      'Full Light Mode and Dark Mode support',
+      'Course and learning-material management',
+      'Document upload and question answering workflow',
+      'Quiz and assessment features',
+      'Personal study planning',
+      'Optional AI-assisted learning support',
     ],
-    tableFields: ['ID', 'Image', 'Title', 'Type', 'Location', 'Area', 'Price', 'Owner', 'Status', 'Actions'],
-    stats: ['Total Properties', 'Apartments', 'Villas', 'Offices', 'Lands'],
-    tech: ['React', 'JavaScript', 'CSS', 'React Icons'],
+    tableFields: [],
+    stats: [],
+    tech: ['Next.js', 'React', 'PostgreSQL', 'AI Integration'],
     challenges:
-      'Structuring a data-table-heavy interface — filtering, pagination and dark mode — so it stays readable and fast without a backend to lean on.',
+      'Bringing learning workflows and AI-assisted features together while keeping user data and course access separated.',
     built:
-      'The full frontend: sidebar and topbar shell, property forms and tables, statistics cards, charts, and the light/dark theme system.',
+      'An educational web application with course, document, quiz, study-plan, and AI tutoring features.',
+    liveUrl: 'https://edumind-ai-i17b.vercel.app',
+    sourceUrl: null,
+    sourceStatus: 'Private repository',
+  },
+  {
+    id: 'reas',
+    name: 'REAS — Real Estate Analytics System',
+    category: ['Full Stack', 'Analytics Dashboard'],
+    filterTags: ['Web Applications', 'Dashboards', 'Backend', 'Python', 'React'],
+    description:
+      'A real estate analytics application featuring a React frontend, Flask REST API, and a dashboard for property data.',
+    overview:
+      'A full-stack real estate system with a React interface and a Python Flask REST API for managing property information and viewing analytics.',
+    problem:
+      'Property information and real estate statistics need a structured interface that makes records easier to manage and understand.',
+    verified: true,
+    screens: ['Dashboard', 'Properties', 'Owners', 'Employees', 'Statistics', 'Reports', 'Settings'],
+    features: [
+      'Property management through a web dashboard',
+      'Flask-powered REST API',
+      'Analytics and statistics views',
+      'Responsive interface with light and dark themes',
+    ],
+    tableFields: [],
+    stats: [],
+    tech: ['React', 'Flask', 'Python', 'REST API'],
+    challenges:
+      'Connecting the frontend dashboard to a separate backend API and presenting property data in a clear interface.',
+    built:
+      'The React frontend and Flask REST API integration for the real estate analytics system.',
+    liveUrl: 'https://rea-ss.vercel.app',
+    sourceUrl: 'https://github.com/ahmedhassan232/REASs',
+    sourceStatus: null,
+  },
+  {
+    id: 'smartreview-ai',
+    name: 'SmartReviewAI',
+    category: ['Academic Project', 'Machine Learning'],
+    filterTags: ['AI', 'Python', 'Machine Learning'],
+    description:
+      'An academic project focused on analyzing product reviews and identifying potentially fake ratings using Machine Learning and Natural Language Processing.',
+    overview:
+      'A product-review analysis project that applies machine learning and natural language processing to help distinguish genuine feedback from potentially fake ratings.',
+    problem:
+      'Online product ratings can be difficult to evaluate when reviews may be misleading or inauthentic.',
+    verified: true,
+    screens: ['Review Input', 'Analysis', 'Results'],
+    features: [
+      'Product review text analysis',
+      'Machine learning fundamentals applied to rating analysis',
+      'Natural language processing workflow',
+      'React interface and API integration',
+    ],
+    tableFields: [],
+    stats: [],
+    tech: ['Python', 'Machine Learning', 'NLP', 'React', 'API Integration'],
+    challenges:
+      'Combining text-processing and machine-learning concepts with a usable application workflow.',
+    built:
+      'An academic review-analysis workflow focused on identifying potentially fake ratings.',
     liveUrl: null,
     sourceUrl: null,
+    sourceStatus: 'No public repository',
+  },
+  {
+    id: 'noor-al-islam',
+    name: 'Noor Al-Islam',
+    category: ['Mobile Application', 'Android'],
+    filterTags: ['Mobile Applications', 'React', 'JavaScript'],
+    description:
+      'An Islamic mobile application developed with web technologies and packaged for Android.',
+    overview:
+      'A mobile-focused Islamic application with Quran reading and listening, Hadith, daily supplications, prayer times, and Qibla features.',
+    problem:
+      'Provide commonly used Islamic resources in one accessible mobile application with Arabic and RTL support.',
+    verified: true,
+    screens: ['Quran', 'Hadith', 'Supplications', 'Prayer Times', 'Qibla', 'Radio'],
+    features: [
+      'Quran reading and audio recitation',
+      'Hadith and daily supplications',
+      'Prayer-time and Qibla tools',
+      'Android packaging using Capacitor',
+      'Arabic right-to-left interface',
+    ],
+    tableFields: [],
+    stats: [],
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Capacitor'],
+    challenges:
+      'Adapting a web application for Android while preserving a comfortable mobile experience.',
+    built:
+      'A mobile Islamic application and its Android packaging workflow.',
+    liveUrl: null,
+    sourceUrl: 'https://github.com/ahmedhassan232/noor-al-islam-app-',
+    sourceStatus: null,
   },
   {
     id: 'personal-portfolio',
     name: 'Personal Portfolio Website',
-    category: ['Web', 'Frontend'],
+    category: ['Web Application', 'Portfolio'],
     filterTags: ['Web Applications', 'Frontend', 'React', 'JavaScript'],
     description:
-      'A multi-page personal portfolio website designed to showcase projects, skills, certificates, timeline, resume, blog content and contact information.',
+      'A responsive multi-page portfolio presenting my background, skills, selected projects, and contact information.',
     overview:
-      'A responsive, multi-page portfolio built to present projects and skills through an interactive, dashboard-inspired frontend — this website.',
+      'A frontend-only React portfolio with dedicated pages for projects, skills, experience, CV, and contact information.',
     problem:
-      'Needed one place — beyond a resume — to show real projects, skills and a working CV through an interface that itself demonstrates frontend ability.',
+      'Presenting technical experience and selected work in one place beyond a traditional CV.',
     verified: true,
-    screens: [
-      'Dashboard', 'About', 'Projects', 'Skills', 'Services',
-      'CV / Resume', 'Certificates', 'Timeline', 'Blog', 'Contact',
-    ],
+    screens: ['Overview', 'About', 'Projects', 'Skills', 'CV', 'Contact'],
     features: [
-      'Multi-page layout with responsive design across breakpoints',
-      'Full Light Mode and Dark Mode theming',
-      'Interactive navigation with a command palette (Ctrl+K)',
-      'Custom cursor and page-load animations',
-      'Animated counters, charts and a career timeline',
-      'Printable CV and a working contact form',
+      'Responsive multi-page layout',
+      'Project cards with verified project links',
+      'Light and dark themes',
+      'Printable CV page',
+      'Contact links and social profiles',
     ],
     tableFields: [],
     stats: [],
-    tech: ['React', 'JavaScript', 'Vite', 'CSS'],
+    tech: ['React', 'JavaScript', 'Vite', 'React Router', 'CSS'],
     challenges:
-      'Designing one consistent visual system — sidebar, topbar, cards, forms and modals — that holds up across ten different pages and two themes.',
+      'Keeping a consistent design system across pages while making the project information and external links easy to navigate.',
     built:
-      'Every page and component of this site: routing, layout, theming, the command palette, the project modal system, and the CV/print layout.',
-    liveUrl: null,
-    sourceUrl: null,
+      'The portfolio interface, navigation, project display, skills pages, and CV presentation.',
+    liveUrl: 'https://ahmed-frontp.vercel.app',
+    sourceUrl: 'https://github.com/ahmedhassan232/ahmed-frontp',
+    sourceStatus: null,
   },
 ];
