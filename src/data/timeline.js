@@ -1,27 +1,12 @@
 export const timeline = [
   {
-    year: '2025 — Present',
-    title: 'Software Engineering Studies',
-    description: 'Continuing coursework in software engineering, with a growing focus on web development and frontend technologies.',
+    year: '2023 – 2027',
+    title: 'Bachelor of Artificial Intelligence',
+    description: 'Faculty of Computers and Artificial Intelligence, Beni Suef. Studying Artificial Intelligence, Software Engineering, and Computer Science.',
   },
   {
-    year: '2024',
-    title: 'Web / Portfolio Development',
-    description: 'Designed and built a multi-page personal portfolio to present projects, skills and a working CV in one place.',
-  },
-  {
-    year: '2024',
-    title: 'Real Estate Analytics System',
-    description: 'Built a dashboard-style web application for managing real estate data — properties, owners, statistics and reports.',
-  },
-  {
-    year: '2023',
-    title: 'Software Engineering Foundations',
-    description: 'Core coursework covering programming fundamentals and software engineering principles.',
-  },
-  {
-    year: '2022',
-    title: 'Started Software Engineering Degree',
-    description: 'Began studying software engineering.',
+    year: '2023 – Present',
+    title: 'Software Engineering Student | Practical Projects',
+    description: 'Developing personal and academic projects involving web applications, backend services, REST API concepts, database management, and application integration.',
   },
 ];
