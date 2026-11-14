@@ -73,7 +73,7 @@ export default function Sidebar({ open, collapsed, onClose }) {
               <div className="avatar">AH</div>
               <div>
                 <div className="sidebar-user-name">Ahmed Hassan Sayed</div>
-                <div className="sidebar-user-sub">Web Developer · Egypt</div>
+                <div className="sidebar-user-sub">Full Stack Developer · Backend Focus</div>
               </div>
             </div>
           </div>
