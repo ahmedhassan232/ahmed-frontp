@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 export default function ProjectCard({ project, onOpen }) {
   return (
     <div className="project-card card" onClick={() => onOpen(project)} role="button" tabIndex={0}
-      onKeyDown={(e) => { if (e.key === 'Enter') onOpen(project); }}>
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpen(project); } }}>
       <div className="project-card-preview">
         <div className="project-card-preview-glyph">{project.name.slice(0, 2).toUpperCase()}</div>
       </div>
@@ -30,11 +30,13 @@ export default function ProjectCard({ project, onOpen }) {
           <button className="btn btn-ghost" style={{ fontSize: 13 }} onClick={(e) => { e.stopPropagation(); onOpen(project); }}>
             View Project <ArrowUpRight size={14} />
           </button>
-          {project.sourceUrl && (
+          {project.sourceUrl ? (
             <a className="btn btn-ghost" style={{ fontSize: 13 }} href={project.sourceUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
               Source Code
             </a>
-          )}
+          ) : project.sourceStatus ? (
+            <span className="text-faint" style={{ fontSize: 12 }}>{project.sourceStatus}</span>
+          ) : null}
         </div>
       </div>
     </div>
